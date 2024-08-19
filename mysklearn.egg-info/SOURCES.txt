@@ -1,0 +1,8 @@
+README.md
+mysimplepackage/__init__.py
+mysimplepackage/simplemodule.py
+mysklearn.egg-info/PKG-INFO
+mysklearn.egg-info/SOURCES.txt
+mysklearn.egg-info/dependency_links.txt
+mysklearn.egg-info/requires.txt
+mysklearn.egg-info/top_level.txt
