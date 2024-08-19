@@ -1,4 +1,4 @@
 # test_datacamp_1
 
 
-Musyawarah golkar
+Insya Allah menang dan pintar
