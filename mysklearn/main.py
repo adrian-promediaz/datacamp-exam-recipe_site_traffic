@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 from mysklearn.preprocessing.conversions import to_integer, remove_outliers, label_encoder
 from mysklearn.regression.regression import logisitic_regression
-# from mysklearn.feature_importances.feature_importances import feature_importances
 
 recipe_site_traffic_df = pd.read_csv("recipe_site_traffic_2212.csv")
 
@@ -11,10 +10,7 @@ to_integer(recipe_site_traffic_df, "servings")
 categorical_columns = ["high_traffic","category"]
 for column in categorical_columns:
     label_encoder(recipe_site_traffic_df, column)
-# label_encoder(recipe_site_traffic_df, "high_traffic")
-# label_encoder(recipe_site_traffic_df, "category")
-
-
+    
 ## Dropping the features with null values
 columns = ["calories", "carbohydrate", "protein", "sugar"]
 recipe_site_traffic_cleaned_df =  recipe_site_traffic_df.dropna(axis="index", subset=columns)
@@ -34,6 +30,3 @@ for i in numerical_features_logs:
 feature_cols = ["calories_log", "carbohydrate_log", "protein_log", "sugar_log","servings_int","category_categorical"]
 target_col = "high_traffic_categorical"
 logisitic_regression(recipe_site_traffic_cleaned_df, feature_cols, target_col)
-
-## Finding the feature importances
-# feature_importances()
